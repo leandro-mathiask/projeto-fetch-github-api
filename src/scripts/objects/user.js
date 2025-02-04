@@ -8,7 +8,6 @@ const user = {
     events: [],
     repositories: [],
     setInfo(gitHubUser){
-        console.log(user)
         this.avatarUrl = gitHubUser.avatar_url
         this.name = gitHubUser.name
         this.bio = gitHubUser.bio

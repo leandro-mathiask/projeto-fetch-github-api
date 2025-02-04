@@ -148,6 +148,16 @@ main {
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
+.container .profile-data .repositories ul li a h4 {
+  margin-top: 10px;
+  color: #FFFFFF;
+}
+.container .profile-data .repositories ul li a h4 span{
+  padding: 2px 10px;
+  background-color: #8656bc;
+  border-radius: 3px;
+  margin-right: 4px;
+}
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;

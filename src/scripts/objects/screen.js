@@ -40,9 +40,19 @@ const screen = {
         
                 
         let repositoriesItens = ""
+        
         user.repositories.forEach(repo => {
-            repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
+            if (repo.language === 'JavaScript') {
+                repo.language = 'JS'
+            } if (repo.language === null) {
+                repo.language = ''
+            }
+
+            repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name} <h4><span>🍴${repo.forks}</span><span>⭐${repo.stargazers_count}</span><span>👀${repo.watchers}</span><span>👨‍🏫${repo.language}</span></h4></a>
+            </li>`
         })
+        console.log(user)
+
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `<div class="repositories section">
                                                 <h2>Repositórios</h2>
